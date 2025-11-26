@@ -5,21 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ระบบจองถ่ายภาพ โรงเรียน</title>
     <style>
-        /* ตั้งค่าให้เต็มจอและปิด Scrollbar ของหน้าหลัก */
-        body, html {
-            margin: 0;          /* ลบขอบขาวรอบนอก */
-            padding: 0;         /* ลบระยะห่างภายใน */
-            width: 100%;
-            height: 100%;       /* บังคับความสูงเต็มพื้นที่ */
-            overflow: hidden;   /* ซ่อน Scrollbar ของหน้าเว็บ (สำคัญมาก) */
-        }
-        
-        /* ตั้งค่า iframe */
-        iframe {
+        /* ล้างค่าเริ่มต้นทั้งหมด */
+        html, body {
+            margin: 0;
+            padding: 0;
             width: 100%;
             height: 100%;
-            border: none;       /* ลบเส้นขอบ */
-            display: block;     /* ป้องกันการเกิดช่องว่างเล็กๆ ด้านล่าง */
+            overflow: hidden; /* คำสั่งสำคัญ! ซ่อน Scrollbar ของหน้าหลัก */
+        }
+
+        /* บังคับ iframe ให้ยึดติดเต็มจอแบบ Fixed */
+        iframe {
+            position: fixed;  /* ยึดติดหน้าจอ ไม่ให้ขยับ */
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; 
+            z-index: 9999;    /* ให้มั่นใจว่าอยู่ชั้นบนสุด */
         }
     </style>
 </head>
