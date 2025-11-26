@@ -4,8 +4,26 @@
     <base target="_top">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ระบบจองถ่ายภาพ โรงเรียน</title>
+    <style>
+        /* ตั้งค่าให้เต็มจอและปิด Scrollbar ของหน้าหลัก */
+        body, html {
+            margin: 0;          /* ลบขอบขาวรอบนอก */
+            padding: 0;         /* ลบระยะห่างภายใน */
+            width: 100%;
+            height: 100%;       /* บังคับความสูงเต็มพื้นที่ */
+            overflow: hidden;   /* ซ่อน Scrollbar ของหน้าเว็บ (สำคัญมาก) */
+        }
+        
+        /* ตั้งค่า iframe */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;       /* ลบเส้นขอบ */
+            display: block;     /* ป้องกันการเกิดช่องว่างเล็กๆ ด้านล่าง */
+        }
+    </style>
 </head>
 <body>
-    <iframe style="width: 100%; height: 100vh;"  src="https://script.google.com/macros/s/AKfycbxmsqmfkfZO-jTgAyJHe00Q0bso7Q-tqqajyWwDKroUrh1rZaoSXVWN76UYOrwlaCsGRg/exec" frameborder="0"></iframe>
+    <iframe src="https://script.google.com/macros/s/AKfycbxmsqmfkfZO-jTgAyJHe00Q0bso7Q-tqqajyWwDKroUrh1rZaoSXVWN76UYOrwlaCsGRg/exec"></iframe>
 </body>
 </html>
